@@ -6,7 +6,7 @@ Carrier, NAS (National Aviation Services), and Late Aircraft Delays cause most o
 For definitions of delays, see: 
 https://www.bts.gov/topics/airlines-and-airports/airline-time-performance-and-causes-flight-delays
 ## Design
-I selected the flights data from the data set options. I started with the most recent complete year available (i.e., 2008) from http://stat-computing.org/dataexpo/2009/the-data.html. I decided to show variations in flight performance patterns over time, i.e. seasonal variation. Initially, I suspected that weather delays would account for a very large share of delays, and that those would vary significantly across seasons. However, it turned out that other delay types are much more prominent, specifically CarrierDelay, NASDelays, and in particular LateAircraftDelay. 
+I selected the flights data from the data set options. I started with the most recent complete year available (i.e., 2008) from http://stat-computing.org/dataexpo/2009/the-data.html. I decided to show variations in flight performance patterns over time, i.e. seasonal variation, and distinguish between types of delays. Initially, I suspected that weather delays would account for a very large share of delays, and that those would vary significantly across seasons. However, it turned out that other delay types are much more prominent, specifically CarrierDelay, NASDelays, and in particular LateAircraftDelay. 
 
 To gradually improve the chart across iterations, I asked 3 friends for feedback (labeled Reviewers 1-3). Their comments are documented below in the Feedback section. I incorporated the suggestions in my iterations toward the final chart.
 
