@@ -8,6 +8,8 @@ https://www.bts.gov/topics/airlines-and-airports/airline-time-performance-and-ca
 ## Design
 I selected the flights data from the data set options. I started with the most recent complete year available (i.e., 2008) from http://stat-computing.org/dataexpo/2009/the-data.html. I decided to show variations in flight performance patterns over time, i.e. seasonal variation. Initially, I suspected that weather delays would account for a very large share of delays, and that those would vary significantly across seasons. However, it turned out that other delay types are much more prominent, specifically CarrierDelay, NASDelays, and in particular LateAircraftDelay. 
 
+To gradually improve the chart across iterations, I asked 3 friends for feedback (labeled Reviewers 1-3). Their comments are documented below in the Feedback section. I incorporated the suggestions in my iterations toward the final chart.
+
 As I wanted to show variation in types of delays over time, I decided on a line plot as the most suitable chart type, given that there is an inherent dependency on previous time points and the fact that time has a natural ordering. To allow for easy comparison across delay types, I included all types in a single plot (i.e., a multiple line plot). The lines are distinguished by color hue, which makes identification and labeling via a legend simple and easy to process for viewers. 
 
 I first aggregated the data on a weekly basis. I ultimately changed this to a monthly aggregation based on feedback (see Reviewer 1). I also added points to the lines (i.e., double encoding) to help identify the actual data points and to highlight the fact that the data is aggregated (i.e., we are comparing monthly totals) based on feedback. 
@@ -17,6 +19,9 @@ Reviewer 2 suggested to consider changing the measure from absolute to a relativ
 Lastly, Reviewer 3 suggested adding data from other years to allow for further comparison. I ultimately included data from 2004 - 2008, the years where complete data was available with information on delay types. The final chart includes two types of interaction, enhancing understanding of the data. First, a tooltip appears with information on the particular data point when the user hovers over a given point. Second, users can transition between different years (2004-2008) through the select dropdown menu in the top left corner of the page. 
 
 ## Feedback
+- Reviewer 1: "Very intesting project. A line plot is definitely a good way to show this type of data. But maybe you want to also include points so that users can identify the actual data points. Also, the lines are very busy. I think aggregating by month would be sufficient to show the main trends across time."
+- Reviewer 2: "Nice project. I agree that aggregating by month is better, it is easier to see main trends. Maybe you want to show relative numbers, i.e. delay time per month divided by number of flights in that month? Just an idea, especially if there is a large variation of number of scheduled flights from one month to the next."
+- Reviewer 3: "This looks great, there is definitely a message, and it is easy to perceive. Do you have data for other years? Then you could show how this has evolved over time."
 
 ## Resources
 - Murray, S. (2017). Interactive Data Visualization for the Web: An Introduction to Designing with D3. O'Reilly Media, Inc.
