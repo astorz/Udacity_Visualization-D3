@@ -12,6 +12,8 @@ As I wanted to show variation in types of delays over time, I decided on a line 
 
 I first aggregated the data on a weekly basis. I ultimately changed this to a monthly aggregation based on feedback (see Reviewer 1). I also added points to the lines (i.e., double encoding) to help identify data points and to highlight the fact that the data is aggregated (i.e., we are comparing monthly totals) based on feedback. 
 
+Reviewer 2 suggested to consider including information on total flights per time unit. However, I ultimately decided against this for 2 reasons. First, it turns out that the number of total flights per month does not show much variation across a given year. Second, including this information within the same chart would mean creating a double axis chart with different units, which is somewhat controversial (although still common), see a post by Hadley Wickham for a discussion (https://stackoverflow.com/questions/3099219/plot-with-2-y-axes-one-y-axis-on-the-left-and-another-y-axis-on-the-right/3101876#3101876H).
+
 
 ## Feedback
 
