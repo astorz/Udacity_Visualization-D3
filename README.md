@@ -10,11 +10,11 @@ I selected the flights data from the data set options. I started with the most r
 
 As I wanted to show variation in types of delays over time, I decided on a line plot as the most suitable chart type, given that there is an inherent dependency on previous time points and time has a natural ordering. To allow for easy comparison across delay types, I included all types in a single plot (i.e., a multiple line plot). The lines are distinguished by color hue, which makes identification and labeling via a legend simple and easy to process for viewers. 
 
-I first aggregated the data on a weekly basis. I ultimately changed this to a monthly aggregation based on feedback (see Reviewer 1). I also added points to the lines (i.e., double encoding) to help identify data points and to highlight the fact that the data is aggregated (i.e., we are comparing monthly totals) based on feedback. 
+I first aggregated the data on a weekly basis. I ultimately changed this to a monthly aggregation based on feedback (see Reviewer 1). I also added points to the lines (i.e., double encoding) to help identify the actual data points and to highlight the fact that the data is aggregated (i.e., we are comparing monthly totals) based on feedback. 
 
 Reviewer 2 suggested to consider changing the measure from absolute to a relative measure, i.e. dividing total delay time by flights per month. I ultimately decided against this as a) there is actually fairly little variation in number of total flights per month across a given year and b) keeping the absolute measure was deemed more intuitive as the relative measure would require an understanding of the measure and knowledge of total flights per time period. 
 
-Lastly, Reviewer 3 suggested adding data from other years to allow for further comparison. I ultimately included data from 2004 - 2008, the years where complete data was available with information on delay types. The final chart then includes two types of interaction. First, there is a 
+Lastly, Reviewer 3 suggested adding data from other years to allow for further comparison. I ultimately included data from 2004 - 2008, the years where complete data was available with information on delay types. The final chart then includes two types of interaction. First, there a tooltip appears with information on the particular data point when the user hovers over a given point. Second, users can transition between different years (2004-2008) through the select dropdown menu in the top left corner of the page. 
 
 ## Feedback
 
