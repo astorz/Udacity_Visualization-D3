@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!--  Loading D3 and dimple.js -->
     <script src="http://d3js.org/d3.v4.min.js"></script>
     <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
 
@@ -13,9 +14,11 @@
     </style>
 
     <script type="text/javascript">
+
+      // Original draw function to create viz
+
       function draw(data) {
 
-        // "use strict";
         var margin = 75,
             width = 1400 - margin,
             height = 600 - margin;
@@ -37,16 +40,17 @@
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
+        y.title = "Total delay in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
       };
 
+      // Updated draw function for 2007
+
       function draw2007(data) {
 
-        // "use strict";
         var margin = 75,
             width = 1400 - margin,
             height = 600 - margin;
@@ -64,16 +68,18 @@
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
+        y.title = "Total delay in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
       };
 
+
+      // Updated draw function for 2006
+
       function draw2006(data) {
 
-        // "use strict";
         var margin = 75,
             width = 1400 - margin,
             height = 600 - margin;
@@ -91,16 +97,18 @@
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
+        y.title = "Total delay in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
       };
 
+
+      // Updated draw function for 2005
+
       function draw2005(data) {
 
-        // "use strict";
         var margin = 75,
             width = 1400 - margin,
             height = 600 - margin;
@@ -118,16 +126,18 @@
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
+        y.title = "Total delay in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
       };
 
+
+      // Updated draw function for 2004
+
       function draw2004(data) {
 
-        // "use strict";
         var margin = 75,
             width = 1400 - margin,
             height = 600 - margin;
@@ -145,16 +155,18 @@
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
+        y.title = "Total delay in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
       };
 
+
+      // Updated draw function to reload 2008
+
       function draw2008(data) {
 
-        // "use strict";
         var margin = 75,
             width = 1400 - margin,
             height = 600 - margin;
@@ -172,7 +184,7 @@
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
+        y.title = "Total delay in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
@@ -185,8 +197,12 @@
   <body>
 
       <script type="text/javascript">
+        // Using D3 to load the data;
+        // after load is complete, draw function is executed
         d3.csv("data/delays_monthly_2004-2008.csv", draw);
       </script>
+
+      <!--  Creating a select button with options for the years -->
 
       <select id="year" name="year_selection">
         <option value="2008">2008</option>
@@ -195,6 +211,8 @@
         <option value="2005">2005</option>
         <option value="2004">2004</option>
       </select>
+
+      <!--  Logic to load data based on user input -->
 
       <script type="text/javascript">
         d3.select("#year").on("change", function() {
