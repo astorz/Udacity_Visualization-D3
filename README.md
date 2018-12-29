@@ -14,7 +14,7 @@ I first aggregated the data on a weekly basis. I ultimately changed this to a mo
 
 Reviewer 2 suggested to consider changing the measure from absolute to a relative measure, i.e. dividing total delay time by flights per month. I ultimately decided against this as a) there is actually fairly little variation in number of total flights per month across a given year and b) keeping the absolute measure was deemed more intuitive as the relative measure would require an understanding of the measure and knowledge of total flights per time period. 
 
-Lastly, Reviewer 3 suggested adding data from other years to allow for further comparison. I ultimately included data from 2004 - 2008, the years where complete data was available with information on delay types. The final chart then includes two types of interaction. First, there a tooltip appears with information on the particular data point when the user hovers over a given point. Second, users can transition between different years (2004-2008) through the select dropdown menu in the top left corner of the page. 
+Lastly, Reviewer 3 suggested adding data from other years to allow for further comparison. I ultimately included data from 2004 - 2008, the years where complete data was available with information on delay types. The final chart includes two types of interaction, enhancing understanding of the data. First, a tooltip appears with information on the particular data point when the user hovers over a given point. Second, users can transition between different years (2004-2008) through the select dropdown menu in the top left corner of the page. 
 
 ## Feedback
 
