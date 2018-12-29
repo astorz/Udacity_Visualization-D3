@@ -11,4 +11,4 @@ https://www.bts.gov/topics/airlines-and-airports/airline-time-performance-and-ca
 
 ## Resources
 - Murray, S. (2017). Interactive Data Visualization for the Web: An Introduction to Designing with D3. O'Reilly Media, Inc.
-- Meeks, E. (2018). D3. js in action: data visualization with JavaScript. Manning Publications.
+- Meeks, E. (2018). D3.js in Action: Data Visualization with JavaScript. Manning Publications.
