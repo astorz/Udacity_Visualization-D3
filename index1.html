@@ -22,7 +22,7 @@
 
         d3.select("body")
           .append("h2")
-          .text("US Total Monthly Aircraft Delays in 2008, by Type")
+          .text("US Total Weekly Aircraft Delays in 2008, by Type")
 
         var svg = d3.select("body")
           .append("svg")
@@ -33,12 +33,12 @@
 
         var myChart = new dimple.chart(svg, data);
         myChart.setBounds(60, 30, 1150, 500);
-        var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
-        x.title = "Month";
+        var x = myChart.addCategoryAxis("x", "WeekOfYear");
+        x.addOrderRule("WeekOfYear");
+        x.title = "Week";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Totla delays in minutes";
+        y.title = "Total delays in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
-        myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
       };
@@ -48,7 +48,7 @@
   <body>
 
       <script type="text/javascript">
-        d3.csv("delays_monthly.csv", draw);
+        d3.csv("data/delays_weekly.csv", draw);
       </script>
 
   </body>

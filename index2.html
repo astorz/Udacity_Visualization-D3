@@ -22,7 +22,7 @@
 
         d3.select("body")
           .append("h2")
-          .text("US Total Monthly Aircraft Delays by Type, 2004-2008")
+          .text("US Total Monthly Aircraft Delays in 2008, by Type")
 
         var svg = d3.select("body")
           .append("svg")
@@ -31,208 +31,25 @@
           .append('g')
               .attr('class','chart');
 
-        data = dimple.filterData(data, "Year", ["2008"])
         var myChart = new dimple.chart(svg, data);
         myChart.setBounds(60, 30, 1150, 500);
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
+        y.title = "Totla delays in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
       };
-
-      function draw2007(data) {
-
-        // "use strict";
-        var margin = 75,
-            width = 1400 - margin,
-            height = 600 - margin;
-
-        var svg = d3.select("body")
-          .append("svg")
-            .attr("width", width + margin)
-            .attr("height", height + margin)
-          .append('g')
-              .attr('class','chart');
-
-        data = dimple.filterData(data, "Year", ["2007"])
-        var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 500);
-        var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
-        x.title = "Month";
-        var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
-        myChart.addSeries("DelayType", dimple.plot.line);
-        myChart.addSeries("DelayType", dimple.plot.scatter);
-        var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
-        myChart.draw();
-      };
-
-      function draw2006(data) {
-
-        // "use strict";
-        var margin = 75,
-            width = 1400 - margin,
-            height = 600 - margin;
-
-        var svg = d3.select("body")
-          .append("svg")
-            .attr("width", width + margin)
-            .attr("height", height + margin)
-          .append('g')
-              .attr('class','chart');
-
-        data = dimple.filterData(data, "Year", ["2006"])
-        var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 500);
-        var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
-        x.title = "Month";
-        var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
-        myChart.addSeries("DelayType", dimple.plot.line);
-        myChart.addSeries("DelayType", dimple.plot.scatter);
-        var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
-        myChart.draw();
-      };
-
-      function draw2005(data) {
-
-        // "use strict";
-        var margin = 75,
-            width = 1400 - margin,
-            height = 600 - margin;
-
-        var svg = d3.select("body")
-          .append("svg")
-            .attr("width", width + margin)
-            .attr("height", height + margin)
-          .append('g')
-              .attr('class','chart');
-
-        data = dimple.filterData(data, "Year", ["2005"])
-        var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 500);
-        var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
-        x.title = "Month";
-        var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
-        myChart.addSeries("DelayType", dimple.plot.line);
-        myChart.addSeries("DelayType", dimple.plot.scatter);
-        var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
-        myChart.draw();
-      };
-
-      function draw2004(data) {
-
-        // "use strict";
-        var margin = 75,
-            width = 1400 - margin,
-            height = 600 - margin;
-
-        var svg = d3.select("body")
-          .append("svg")
-            .attr("width", width + margin)
-            .attr("height", height + margin)
-          .append('g')
-              .attr('class','chart');
-
-        data = dimple.filterData(data, "Year", ["2004"])
-        var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 500);
-        var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
-        x.title = "Month";
-        var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
-        myChart.addSeries("DelayType", dimple.plot.line);
-        myChart.addSeries("DelayType", dimple.plot.scatter);
-        var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
-        myChart.draw();
-      };
-
-      function draw2008(data) {
-
-        // "use strict";
-        var margin = 75,
-            width = 1400 - margin,
-            height = 600 - margin;
-
-        var svg = d3.select("body")
-          .append("svg")
-            .attr("width", width + margin)
-            .attr("height", height + margin)
-          .append('g')
-              .attr('class','chart');
-
-        data = dimple.filterData(data, "Year", ["2008"])
-        var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 500);
-        var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
-        x.title = "Month";
-        var y = myChart.addMeasureAxis("y", "Delay");
-        y.title = "Delay in minutes";
-        myChart.addSeries("DelayType", dimple.plot.line);
-        myChart.addSeries("DelayType", dimple.plot.scatter);
-        var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
-        myChart.draw();
-      };
-
     </script>
   </head>
 
   <body>
 
       <script type="text/javascript">
-        d3.csv("delays_monthly_2004-2008.csv", draw);
+        d3.csv("data/delays_monthly.csv", draw);
       </script>
 
-      <select id="year" name="year_selection">
-        <option value="2008">2008</option>
-        <option value="2007">2007</option>
-        <option value="2006">2006</option>
-        <option value="2005">2005</option>
-        <option value="2004">2004</option>
-      </select>
-
-      <script type="text/javascript">
-        d3.select("#year").on("change", function() {
-          selectValue = d3.select('select').property('value');
-          if (selectValue == 2007) {
-            d3.select("svg")
-              .remove();
-            d3.csv("delays_monthly_2004-2008.csv", draw2007)
-              .transition
-              .duration(500);
-          }
-          if (selectValue == 2006) {
-            d3.select("svg").remove();
-            d3.csv("delays_monthly_2004-2008.csv", draw2006)
-              .transition
-              .duration(500);
-          }
-          if (selectValue == 2005) {
-            d3.select("svg")
-              .remove();
-            d3.csv("delays_monthly_2004-2008.csv", draw2005)
-              .transition
-              .duration(500);
-          }
-          if (selectValue == 2004) {
-            d3.select("svg")
-              .remove();
-            d3.csv("delays_monthly_2004-2008.csv", draw2004)
-              .transition
-              .duration(500);
-          }
-          if (selectValue == 2008) {
-            d3.select("svg")
-              .remove();
-            d3.csv("delays_monthly_2004-2008.csv", draw2008)
-              .transition
-              .duration(500);
-          }
-        })
-      </script>
+  </body>
 </html>
