@@ -20,7 +20,7 @@ Lastly, Reviewer 3 suggested adding data from other years to allow for further c
 
 ## Feedback
 - Reviewer 1: "Very intesting project. A line plot is definitely a good way to show this type of data. But maybe you want to also include points so that users can identify the actual data points. Also, the lines are very "busy". I think aggregating by month would be sufficient to show the main trends across time."
-- Reviewer 2: "Nice project. I agree that aggregating by month is better, it is easier to see main trends. Maybe you want to show relative numbers, i.e. delay time per month divided by number of flights in that month? Just an idea, especially if there is a large variation of number of scheduled flights from one month to the next."
+- Reviewer 2: "Nice project. I agree that aggregating by month is better, it is easier to see the main trends. Maybe you want to show relative numbers, i.e. delay time per month divided by number of flights in that month? Just an idea, especially if there is a large variation of number of scheduled flights from one month to the next."
 - Reviewer 3: "This looks great, there is definitely a message, and it is easy to perceive. Do you have data for other years? Then you could show how this has evolved over time."
 
 ## Resources
