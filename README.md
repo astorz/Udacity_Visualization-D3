@@ -19,7 +19,8 @@ Reviewer 2 suggested to consider changing the measure from an absolute to a rela
 
 Lastly, Reviewer 3 suggested adding data from other years to allow for further comparison. I ultimately included data from 2004 - 2008, the years where complete data was available with information on delay types. The final chart includes two types of interaction, enhancing understanding of the data. First, a tooltip appears with information on the particular data point when the user hovers over a given point. Second, users can transition between different years (2004-2008) through the select dropdown menu in the top left corner of the page.
 
-**Update**
+**Update***
+
 I made several changes to the visualization in light of reviewer comments. In order to make the visualization more explanatory, I focused on the surprising fact that weather only acccounts for a small share of delays as the core finding. In order to draw viewer attention to this, I changed the title and added a narrative paragraph explaining the data and the main finding. In addition, the line for weather now interactively first increases its stroke weight (using a transition), then shrinks back but maintains a slightly higher stroke weight when it is first rendered to draw attention to the comparatively low level for weather delays. When the viewer moves through different years, the weather delay line still has a slightly higher stroke weight to focus user attention, but does not move through the transition anymore as viewer attention should already be established (and continuous transitions may make the visualization too busy and not aid comprehension and usability anymore). Now, index3.html represents the version initially submitted. The new version is now labeled 'index_final.html'.
 
 ## Feedback
