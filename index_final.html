@@ -34,7 +34,7 @@
           .style("width", '1250px')
           .style("height", '100px')
           .style("margin", '25px')
-          .text("With safety being paramount in aviation, weather (e.g., strong winds, fog, snow, heavy rainfall, etc.) would seem like a top reason for flight delays. Moreover, if weather is a main cause, delays could be expected to follow seasonal patterns. Since 2003, the US Bureau of Transportation Statistics (BTS) has been collecting details on the causes of flights delays in the US. The data show that, in fact, the most common types of delays are Late Aircraft, National Aviation Services (NAS), and Carrier delays. While these types of delays do show seasonal variation – delays tend to peak in summer and winter – most of those delays are not due to bad weather. This is true across the years analyzed here (2004-2008), which can be explored and compared via the dropdown menu.")
+          .text("With safety being paramount in aviation, weather (e.g., strong winds, fog, snow, heavy rainfall, etc.) would seem like a top reason for flight delays. Moreover, if weather is a main cause, delays could be expected to follow seasonal patterns. Since 2003, the US Bureau of Transportation Statistics (BTS) has been collecting details on the causes of flights delays in the US. The data show that, in fact, the most common types of delays are Late Aircraft, National Aviation Services (NAS), and Carrier delays. While these types of delays do show seasonal variation – delays tend to peak in summer and winter – most of those delays are not due to challending weather conditions. This is true across the years analyzed here (2004-2008), which can be explored and compared via the dropdown menu.")
           .style("font-size", "18px");
 
         var svg = d3.select("body")
@@ -61,10 +61,10 @@
         d3.select('#dimple-weatherdelay')
           .style('stroke-width', '1px')
           .transition()
-          .duration(1000)
+          .duration(1500)
           .style('stroke-width', '12px')
           .transition()
-          .duration(500)
+          .duration(750)
           .style('stroke-width', '4px');
       };
 
