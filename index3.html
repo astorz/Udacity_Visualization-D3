@@ -15,8 +15,6 @@
 
     <script type="text/javascript">
 
-      "use strict";
-
       // Original draw function to create viz
 
       function draw(data) {
@@ -27,15 +25,7 @@
 
         d3.select("body")
           .append("h2")
-          .text("US flight delays: Weather far from the main cause")
-
-        d3.select("body")
-          .append("div")
-          .style("width", '1250px')
-          .style("height", '100px')
-          .style("margin", '25px')
-          .text("With safety being paramount in aviation, weather (e.g., strong winds, fog, snow, heavy rainfall, etc.) would seem like a top reason for flight delays. Moreover, if weather is a main cause, delays could be expected to follow seasonal patterns. Since 2003, the US Bureau of Transportation Statistics (BTS) has been collecting details on the causes of flights delays in the US. The data show that, in fact, the most common types of delays are Late Aircraft, National Aviation Services (NAS), and Carrier delays. While these types of delays do show seasonal variation – delays tend to peak in summer and winter – most of those delays are not due to bad weather. This is true across the years analyzed here (2004-2008), which can be explored and compared via the dropdown menu.")
-          .style("font-size", "18px");
+          .text("US Total Monthly Aircraft Delays by Type, 2004-2008")
 
         var svg = d3.select("body")
           .append("svg")
@@ -46,26 +36,15 @@
 
         data = dimple.filterData(data, "Year", ["2008"])
         var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 400);
+        myChart.setBounds(60, 30, 1150, 500);
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
         y.title = "Total delay in minutes";
         myChart.addSeries("DelayType", dimple.plot.line);
         myChart.addSeries("DelayType", dimple.plot.scatter);
-        // if (condition) {
-        //
-        // }
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
-        myChart.draw()
-        d3.select('#dimple-weatherdelay')
-          .style('stroke-width', '1px')
-          .transition()
-          .duration(1000)
-          .style('stroke-width', '12px')
-          .transition()
-          .duration(500)
-          .style('stroke-width', '4px');
+        myChart.draw();
       };
 
       // Updated draw function for 2007
@@ -85,7 +64,7 @@
 
         data = dimple.filterData(data, "Year", ["2007"])
         var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 400);
+        myChart.setBounds(60, 30, 1150, 500);
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
@@ -94,8 +73,6 @@
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
-        d3.select('#dimple-weatherdelay')
-          .style('stroke-width', '4px');
       };
 
 
@@ -116,7 +93,7 @@
 
         data = dimple.filterData(data, "Year", ["2006"])
         var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 400);
+        myChart.setBounds(60, 30, 1150, 500);
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
@@ -125,8 +102,6 @@
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
-        d3.select('#dimple-weatherdelay')
-          .style('stroke-width', '4px');
       };
 
 
@@ -147,7 +122,7 @@
 
         data = dimple.filterData(data, "Year", ["2005"])
         var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 400);
+        myChart.setBounds(60, 30, 1150, 500);
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
@@ -156,8 +131,6 @@
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
-        d3.select('#dimple-weatherdelay')
-          .style('stroke-width', '4px');
       };
 
 
@@ -178,7 +151,7 @@
 
         data = dimple.filterData(data, "Year", ["2004"])
         var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 400);
+        myChart.setBounds(60, 30, 1150, 500);
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
@@ -187,8 +160,6 @@
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
-        d3.select('#dimple-weatherdelay')
-          .style('stroke-width', '4px');
       };
 
 
@@ -209,7 +180,7 @@
 
         data = dimple.filterData(data, "Year", ["2008"])
         var myChart = new dimple.chart(svg, data);
-        myChart.setBounds(60, 30, 1150, 400);
+        myChart.setBounds(60, 30, 1150, 500);
         var x = myChart.addTimeAxis("x", "myMonth", "%Y-%m-%d", "%b");
         x.title = "Month";
         var y = myChart.addMeasureAxis("y", "Delay");
@@ -218,8 +189,6 @@
         myChart.addSeries("DelayType", dimple.plot.scatter);
         var lgnd = myChart.addLegend(1250, 250, 150, 800, "right");
         myChart.draw();
-        d3.select('#dimple-weatherdelay')
-          .style('stroke-width', '4px');
       };
 
     </script>
